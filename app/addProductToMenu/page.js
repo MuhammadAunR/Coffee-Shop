@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Upload, Loader, CircleArrowLeft } from 'lucide-react'
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 const AddProductToMenu = () => {
 
@@ -168,10 +169,11 @@ const AddProductToMenu = () => {
                         <div className='h-[250px] border-2 border-gray-400 border-dashed rounded-lg overflow-hidden flex items-center justify-center'>
                             {preview ? (
                                 <div className="h-fit w-1/2 mx-auto rounded-lg overflow-hidden">
-                                    <img
+                                    <Image
                                         src={preview}
                                         alt="Preview"
                                         className="object-contain rounded-lg"
+                                        fill
                                     />
                                 </div>
                             ) : (

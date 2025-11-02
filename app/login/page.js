@@ -130,7 +130,7 @@ export default function CoffeeShopLogin() {
                         </div>
 
                         <p className="text-center mt-6 text-[#6c584c] text-sm">
-                            Don't have an account?{' '}
+                            Don&apos;t have an account?{' '}
                             <button
                                 onClick={() => goToSignUpPage()}
                                 className="text-[#a98467] font-semibold hover:text-[#6c584c] transition-colors">

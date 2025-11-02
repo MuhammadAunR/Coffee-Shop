@@ -39,7 +39,7 @@ const Guest = () => {
                                 </span>
                                 <div>
                                     <h3 className='font-heading text-2xl'>Organic Coffee</h3>
-                                    <span className='font-body text-gray-500'>We're proud to offer our guests unique blends.</span>
+                                    <span className='font-body text-gray-500'>We&apos;re proud to offer our guests unique blends.</span>
                                 </div>
                             </div>
                         </div>

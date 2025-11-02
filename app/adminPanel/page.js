@@ -5,6 +5,7 @@ import { Loader, MoreVertical, Plus, Trash, UserRound } from 'lucide-react'
 import { ToastContainer, toast } from 'react-toastify';
 import { NextRequest } from 'next/server';
 import { signOut } from 'next-auth/react';
+import Image from 'next/image';
 
 
 const Admin = () => {
@@ -117,9 +118,10 @@ const Admin = () => {
                                     {index + 1}.
                                 </div>
                                 <div className="w-20 flex justify-center">
-                                    <img
+                                    <Image
                                         src={product.image}
                                         alt={product.name}
+                                        fill
                                         className="w-16 h-16 rounded-full object-cover" />
                                 </div>
                                 <div className="flex-1 px-2 font-body font-semibold text-xl text-umber">
