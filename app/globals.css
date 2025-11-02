@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+--color-parchment: #f0ead2ff;
+--color-tea-green: #dde5b6ff;
+--color-olivine: #adc178ff;
+--color-chamoisee: #a98467ff;
+--color-umber: #6c584cff;
+}
+
+@layer utilities {
+  .font-heading {
+      font-family: var(--font-cormorantGaramond), serif;
+}
+.font-body {
+      font-family: var(--font-quattrocentoSans), sans-serif;
+  }
+}
+
+.swiper-slide-active img {
+  transform: scale(1.1);
+  filter: brightness(0.5);
+}
+
+.loader {
+  border-top-color: #3490dc;
+  animation: spin 1s ease-in-out infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hover-underline {
+  @apply transition-all ease-initial cursor-pointer relative 
+          hover:before:content-[''] hover:before:bg-umber 
+          before:h-[3px] before:w-0 hover:before:w-full 
+          before:absolute before:top-6 before:-translate-x-1/2 
+          before:left-1/2 before:bottom-0 before:transition-all 
+          before:duration-300 before:ease-in-out;
+}
+
