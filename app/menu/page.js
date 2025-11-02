@@ -1,7 +1,7 @@
 'use client'
 import ProductCard from '@/components/ProductCard'
 import { CircleArrowLeft, Loader } from 'lucide-react'
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 
 const Menu = () => {
@@ -9,23 +9,24 @@ const Menu = () => {
     const [isLoading, setIsLoading] = useState(true)
     const router = useRouter()
 
-    async function handleGetProduct() {
-        setIsLoading(true)
+
+    const handleGetProduct = useCallback(async () => {
+        setIsLoading(true);
         try {
-            let response = await fetch("/api/addProduct")
-            let result = await response.json()
-            setProduct(result.result)
-            console.log(product)
-            setIsLoading(false)
+            const response = await fetch("/api/addProduct");
+            const result = await response.json();
+            setProduct(result.result);
+            console.log(result.result);
         } catch (error) {
-            console.error("Error Displaying Product", error)
-            Response.json({ success: false, message: 'Error Showing Product' })
+            console.error("Error Displaying Product", error);
+        } finally {
+            setIsLoading(false);
         }
-    }
+    }, []); 
 
     useEffect(() => {
-        handleGetProduct()
-    }, [])
+        handleGetProduct();
+    }, [handleGetProduct]); 
 
     const handleGoToHome = () => {
         router.push('/')

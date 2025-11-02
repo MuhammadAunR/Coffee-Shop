@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { Loader, MoreVertical, Plus, Trash, UserRound } from 'lucide-react'
 import { ToastContainer, toast } from 'react-toastify';
@@ -14,24 +14,23 @@ const Admin = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [delLoader, setDelLoader] = useState(null)
 
-    async function handleGetProduct() {
-        setIsLoading(true)
+    const handleGetProduct = useCallback(async () => {
+        setIsLoading(true);
         try {
-            let response = await fetch("/api/addProduct")
-            let result = await response.json()
-            setProduct(result.result)
-            console.log(product)
-            setIsLoading(false)
+            const response = await fetch("/api/addProduct");
+            const result = await response.json();
+            setProduct(result.result);
+            console.log(result.result);
         } catch (error) {
-            console.error("Error Displaying Product", error)
-            Response.json({ success: false, message: 'Error Showing Product' })
+            console.error("Error Displaying Product", error);
+        } finally {
+            setIsLoading(false);
         }
-    }
+    }, []);
 
     useEffect(() => {
-        handleGetProduct()
-    }, [])
-
+        handleGetProduct();
+    }, [handleGetProduct]);
 
     const handleDeleteProduct = async (id) => {
         try {
