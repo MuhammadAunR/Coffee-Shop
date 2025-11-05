@@ -120,7 +120,8 @@ const Admin = () => {
                                     <Image
                                         src={product.image}
                                         alt={product.name}
-                                        fill
+                                        width={50}
+                                        height={50}
                                         className="w-16 h-16 rounded-full object-cover" />
                                 </div>
                                 <div className="flex-1 px-2 font-body font-semibold text-xl text-umber">

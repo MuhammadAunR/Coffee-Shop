@@ -173,7 +173,8 @@ const AddProductToMenu = () => {
                                         src={preview}
                                         alt="Preview"
                                         className="object-contain rounded-lg"
-                                        fill
+                                        width={300}
+                                        height={250}
                                     />
                                 </div>
                             ) : (
