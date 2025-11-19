@@ -11,7 +11,7 @@ const Guest = () => {
                         <div className='relative'>
                             <Image src={'/image 3.jpg'} alt='Image' width={500} height={0} className='max-md:w-80 max-sm:w-68' />
                             <div>
-                                <Image src={'/image 4.jpg'} alt='Image' width={400} height={0} className='max-md:w-70 max-sm:w-60 absolute -bottom-30 -right-15' />
+                                <Image src={'/image 4.jpg'} alt='Image' width={400} height={0} className='max-md:w-70 max-sm:w-60 absolute -bottom-30 -right-15 max-sm:-right-10' />
                             </div>
                         </div>
                     </div>

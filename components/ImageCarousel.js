@@ -58,7 +58,7 @@ const ImageCarousel = () => {
                   quality={85}
                   className="object-cover transition-transform duration-[6000ms] ease-in-out group-[.swiper-slide-active]:scale-110" />
                 <div className="absolute bottom-[50%] right-[50%] w-1/2 translate-x-[50%] translate-y-[50%] bg-parchment/50 text-black p-4 transition-all ease-in-out duration-300 hover:backdrop-blur-sm cursor-pointer">
-                  <h2 className="text-5xl lg:text-7xl font-semibold text-center pb-3 font-heading">{slide.title}</h2>
+                  <h2 className="text-5xl lg:text-7xl max-sm:text-4xl font-semibold text-center pb-3 font-heading">{slide.title}</h2>
                   <p className="text-xl text-center font-body font-semibold">{slide.desc}</p>
                 </div>
               </div>

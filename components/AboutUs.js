@@ -11,7 +11,7 @@ const AboutUs = () => {
             <div className='relative'>
               <Image src={'/image 1.jpg'} alt='Image' width={400} height={100} className='max-md:w-80 max-sm:w-50' />
               <div>
-                <Image src={'/image 2.jpg'} alt='Image' width={350} height={0} className='max-md:w-70 max-sm:w-40 absolute -bottom-20 -right-25' />
+                <Image src={'/image 2.jpg'} alt='Image' width={350} height={0} className='max-md:w-70 max-sm:w-40 absolute -bottom-20 -right-25 max-sm:-right-15 max-sm:-bottom-15' />
               </div>
             </div>
           </div>
