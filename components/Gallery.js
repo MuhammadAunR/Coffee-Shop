@@ -50,7 +50,7 @@ const Gallery = () => {
                         src="/gallery 5.jpg"
                         alt="Gallery 5"
                         fill
-                        quality={85}
+                        quality={75}
                         className="object-cover hover:scale-105 transition-transform duration-700 ease-in-out"
                     />
                 </div>

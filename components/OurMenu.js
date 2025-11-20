@@ -26,7 +26,6 @@ const OurMenu = () => {
 
     return (
         <>
-            {/* <main className='absolute transform -translate-x-[50%] -translate-y-[50%] left-[50%] top-[50%] w-full'> */}
             <main className='py-32 w-full'>
 
                 <section className='flex flex-col space-y-3 justify-center items-center mb-10'>
@@ -37,7 +36,7 @@ const OurMenu = () => {
                     </div>
                 </section>
 
-                {/* <section className='flex justify-evenly gap-20 w-10/12 mx-auto'> */}
+
                 <section className='grid grid-cols-1 gap-20 w-full px-20 lg:grid lg:grid-cols-2'>
                     <section className='flex flex-col gap-5'>
                         {firstCol.map((item, index) => {
